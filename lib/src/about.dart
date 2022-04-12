@@ -56,6 +56,7 @@ class AboutPage extends StatelessWidget {
     this.dialog = false,
     this.children,
     this.values = const {},
+    this.applicationCreatedBy,
   }) : super(key: key);
 
   /// The title of the page.
@@ -98,6 +99,13 @@ class AboutPage extends StatelessWidget {
   /// Defaults to the empty string.
   final String? applicationLegalese;
 
+  /// A string to show in small print.
+  ///
+  /// Typically this is a created by notice.
+  ///
+  /// Defaults to the empty string.
+  final String? applicationCreatedBy;
+
   /// A widget to show the app description.
   ///
   /// Defaults null.
@@ -133,6 +141,7 @@ class AboutPage extends StatelessWidget {
       applicationIcon: applicationIcon,
       applicationLegalese: applicationLegalese,
       applicationDescription: applicationDescription,
+      applicationCreatedBy: applicationCreatedBy,
       values: values,
       children: children,
     );

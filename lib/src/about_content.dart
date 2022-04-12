@@ -51,6 +51,7 @@ class AboutContent extends StatefulWidget {
     this.applicationDescription,
     this.children,
     this.values = const {},
+    this.applicationCreatedBy,
   }) : super(key: key);
 
   /// The name of the application.
@@ -80,6 +81,13 @@ class AboutContent extends StatefulWidget {
   ///
   /// Defaults to the empty string.
   final String? applicationLegalese;
+
+  /// A string to show in small print.
+  ///
+  /// Typically this is a created by notice.
+  ///
+  /// Defaults to the empty string.
+  final String? applicationCreatedBy;
 
   /// A widget to show the app description.
   ///
@@ -142,6 +150,20 @@ class _AboutContentState extends State<AboutContent> {
                 child: Text(
                   Template(widget.applicationLegalese!).render(widget.values),
                   style: Theme.of(context).textTheme.caption,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            if (widget.applicationCreatedBy != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: Text(
+                  Template(widget.applicationCreatedBy!).render(widget.values),
+                  style: const TextStyle(
+                    color: Color(0xff575757),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                  ),
                   textAlign: TextAlign.center,
                 ),
               ),

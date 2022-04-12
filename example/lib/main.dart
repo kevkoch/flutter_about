@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       applicationIcon: const FlutterLogo(size: 100),
       applicationLegalese: 'Copyright © {{ author }}, {{ year }}',
+      applicationCreatedBy: 'developed by Snifti GmbH',
       children: const <Widget>[
         MarkdownPageListTile(
           filename: 'README.md',
