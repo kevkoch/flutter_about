@@ -42,6 +42,6 @@ ThemeData themeFromCupertino(CupertinoThemeData theme) {
     canvasColor: theme.barBackgroundColor,
     primaryColor: theme.primaryColor,
     // ignore: deprecated_member_use
-    accentColor: theme.primaryContrastingColor,
+    hintColor: theme.primaryContrastingColor,
   );
 }
